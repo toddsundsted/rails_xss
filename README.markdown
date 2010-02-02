@@ -1,7 +1,7 @@
 RailsXss
 ========
 
-This plugin replaces the default ERB template handlers with erubis, and switches the behaviour to escape by default rather than requiring you to escape.  This is consistent with the behaviour in Rails 3.0.
+This plugin switches template handling behaviour to escape by default rather than requiring you to escape.  This is consistent with the behaviour in Rails 3.0.
 
 Strings now have a notion of "html safe",  which is false by default.  Whenever rails copies a string into the response body it checks whether or not the string is safe, safe strings are copied verbatim into the response body, but unsafe strings are escaped first.  
 
@@ -83,8 +83,7 @@ Getting Started
 ===============
 
 1. Install rails 2.3.5 or higher, or freeze rails from 2-3-stable.
-2. Install erubis (gem install erubis)
-3. Install this plugin (ruby script/plugin install git://github.com/NZKoz/rails_xss.git)
-4. Report anything that breaks.
+2. Install this plugin (ruby script/plugin install git://github.com/NZKoz/rails_xss.git)
+3. Report anything that breaks.
 
 Copyright (c) 2009 Koziarski Software Ltd, released under the MIT license. For full details see MIT-LICENSE included in this distribution.
